@@ -4,3 +4,6 @@
 [submodule "mod/ngx-devel-kit"]
 	path = mod/ngx-devel-kit
 	url = https://ikalang@github.com/simpl/ngx_devel_kit.git
+[submodule "mod/ngx-lua"]
+	path = mod/ngx-lua
+	url = https://ikalang@github.com/chaoslawful/lua-nginx-module.git
