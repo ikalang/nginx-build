@@ -1,0 +1,6 @@
+[submodule "mod"]
+	path = mod
+	url = https://ikalang@github.com/simpl/ngx_devel_kit.git
+[submodule "mod/ngx-devel-kit"]
+	path = mod/ngx-devel-kit
+	url = https://ikalang@github.com/simpl/ngx_devel_kit.git
