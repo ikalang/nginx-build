@@ -1,0 +1,28 @@
+#! /bin/sh
+
+NGX_MODULE="mod"
+
+INCLUDE="/usr/local/include"
+LIB="/usr/local/lib"
+
+INSTALL_PATH="/opt/nginx"
+LINK_BIN_PATH="/usr/local/bin"
+
+PREFIX="--prefix=$INSTALL_PATH/"
+DEBUG="--with-debug"
+OPT="
+	--with-cc-opt="-I$INCLUDE"
+	--with-ld-opt="-L$LIB"
+"
+
+MODULES="
+	--add-module=$NGX_MODULE/ngx-devel-kit
+	--add-module=$NGX_MODULE/ngx-lua
+"
+
+ARGS="$PREFIX $DEBUG $MODULES $OPT"
+
+. configure $ARGS
+make
+make install
+ln -fsv $INSTALL_PATH/sbin/nginx $LINK_BIN_PATH/nginx
